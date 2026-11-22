@@ -64,6 +64,10 @@ All emulator state, including your WhatsApp registration, is in `./.android/` of
 
 ## Risks and caveats
 
+- **State follows your working directory.** `wa-emulator` keeps its state in `./.android/` of the directory you run it from. Running it from somewhere new (including via the GitHub URL) creates a fresh AVD with no registration, so you would have to register again. Always run it from the same directory, or set `WA_STATE_DIR` to the absolute path of your existing state directory:
+  ```sh
+  WA_STATE_DIR=$HOME/path/to/.android nix develop "git+https://github.com/aaronArinder/flakes?dir=whatsapp" -c wa-emulator
+  ```
 - WhatsApp may flag or refuse registrations from emulators. If that happens, the fallback is a cheap used Android phone used only for registration and the 14-day check-in.
 - Registering a number moves any existing WhatsApp account on that number to the emulator and logs it out elsewhere. Chat history does not transfer unless you restore a backup.
 - Running WhatsApp on an emulator is not an officially supported setup. Check WhatsApp's Terms of Service and use it at your own risk.

@@ -28,4 +28,4 @@ nix develop        # enter the dev shell
 wa-emulator        # create/boot the emulator
 ```
 
-Emulator state is written to `.android/` in the directory you run it from. See [`whatsapp/README.md`](whatsapp/README.md) for the full setup.
+Emulator state, including your WhatsApp registration, is written to `.android/` in the directory you run it from, so run it from the same place every time or set `WA_STATE_DIR` to your existing state directory. See [`whatsapp/README.md`](whatsapp/README.md) for the full setup.
