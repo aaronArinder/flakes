@@ -14,10 +14,10 @@ Requires [Nix](https://nixos.org/download) with flakes enabled.
 
 ### whatsapp
 
-From GitHub:
+From GitHub, no clone needed (the `github:aaronArinder/flakes?dir=whatsapp` shorthand also works):
 
 ```sh
-nix develop "github:aaronArinder/flakes?dir=whatsapp" -c wa-emulator
+nix develop "git+https://github.com/aaronArinder/flakes?dir=whatsapp" -c wa-emulator
 ```
 
 Or from a local clone:

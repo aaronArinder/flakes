@@ -24,7 +24,7 @@ wa-emulator          # creates the "whatsapp" AVD on first run, then boots it
 Or, without cloning, from the root of the flakes repo:
 
 ```sh
-nix develop "github:aaronArinder/flakes?dir=whatsapp" -c wa-emulator
+nix develop "git+https://github.com/aaronArinder/flakes?dir=whatsapp" -c wa-emulator
 ```
 
 `wa-emulator` passes extra arguments through to `emulator`, for example `wa-emulator -no-snapshot` for a cold boot. A cold boot takes about 100 seconds.
